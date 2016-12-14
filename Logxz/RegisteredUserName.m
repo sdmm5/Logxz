@@ -10,22 +10,13 @@
 
 @implementation RegisteredUserName
 
-- (NSMutableString *) userName: (NSMutableString *)s
+- (NSMutableString *) userName
 {
-//    NSMutableString *show = [NSMutableString stringWithCapacity:12];
     char buffer[100];
     scanf ("%s",buffer);
     NSMutableString *str = [NSMutableString stringWithUTF8String:buffer];
-    s = str;
-    
-    return (s);
-    
+   
+    return (str);
 }
-
-//    {
-//        bUserName = rUserName;
-//    }    - (void) setrUserName:(NSMutableString *)bUserName
-//
-
 
 @end

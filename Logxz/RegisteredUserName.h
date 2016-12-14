@@ -15,6 +15,6 @@
 
 @property (nonatomic,assign)NSMutableString* rUserName;
 
-- (NSMutableString *) userName:(NSMutableString *)s;
+- (NSMutableString *) userName;
 
 @end

@@ -12,47 +12,44 @@
 #import "LogInPassWord.h"
 #import "LogInUserName.h"
 int main(int argc, const char * argv[]) {
-    
+    //注册
         NSLog (@"---------注册---------");
+    //初始化RegisteredUserName类分配内存
         RegisteredUserName *rUserName = [[RegisteredUserName alloc] init];
-    
+    //初始化RegisteredPassWord类分配内存
         RegisteredPassWord *rPassWord = [[RegisteredPassWord alloc] init];
-//        NSMutableString *newUserName = [NSMutableString stringWithFormat:@"%@",rUserName];
-//        NSMutableString *newPassWord = [NSMutableString stringWithFormat:@"%@",rPassWord];
-    NSMutableString *str2 =[NSMutableString stringWithCapacity:12];
-    NSMutableString *str3 = [NSMutableString stringWithCapacity:12];
-    [rUserName userName:str2];
-    [rPassWord userName:str3];
-    
-//        NSMutableString *newUserName = [NSMutableString stringWithFormat:@"%@",rUserName];
-//        NSMutableString *newPassWord = [NSMutableString stringWithFormat:@"%@",rPassWord];
 
-    
-                //注册
-    NSLog(@"%@",rUserName);
+    //接受userName方法返回的NSMutableString对象注册用户名RegisteredUserName使用
+    NSMutableString *str4 = [NSMutableString stringWithCapacity:12];
+    //接受userName方法返回的NSMutableString对象注册用户名RegisteredPassWord使用
+    NSMutableString *str5 = [NSMutableString stringWithCapacity:12];
+    //接收方法返回对象
+    str4 = [rUserName userName];
+    str5 = [rPassWord userName];
         
         //登录
         NSLog (@"---------登录---------");
+    //初始化LogInUserName类分配内存
         LogInUserName *iUserName = [[LogInUserName alloc] init];
+    //初始化LogInPassWord类分配内存
         LogInPassWord *iPassWord = [[LogInPassWord alloc] init];
-//        NSMutableString *oldUserName =[NSMutableString stringWithFormat:@"%@",iUserName];
-//        NSMutableString *oldPassWord =[NSMutableString stringWithFormat:@"%@",iPassWord];
-    NSMutableString *str = [NSMutableString stringWithCapacity:12];
-    NSMutableString *str1 = [NSMutableString stringWithCapacity:12];
-        [iUserName userName:str];
-        [iPassWord userName:str1];
-    
-//        NSMutableString *oldUserName =[NSMutableString stringWithFormat:@"%@",iUserName];
-//        NSMutableString *oldPassWord =[NSMutableString stringWithFormat:@"%@",iPassWord];
+
+    //接受userName方法返回的NSMutableString对象登录用户名LogInUserName使用
+    NSMutableString *str6 = [NSMutableString stringWithCapacity:12];
+    //接受userName方法返回的NSMutableString对象登录密码LogInPassWord使用
+    NSMutableString *str7 = [NSMutableString stringWithCapacity:12];
+    //接受返回对象
+        str6 = [iUserName userName];
+        str7 = [iPassWord userName];
     
         //验证用户名密码是否登录成功
-        if ([[iUserName userName:str] compare: [rUserName userName:str2] options:NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
+        if ([str4 compare: str6 options:NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
         {
-//            if ([[iPassWord userName:str1] compare:[rPassWord userName:str3] options:NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//            {
-//                NSLog (@"登录成功！");
-//            }
-            NSLog (@"登录成功！");
+            if ([str5 compare:str7 options:NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
+            {
+                NSLog (@"登录成功！");
+            }
+            
         }else
         {
             NSLog (@"该用户不存在");
