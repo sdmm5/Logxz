@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B12D3CF1DFF1BE400967386 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B12D3CE1DFF1BE400967386 /* main.m */; };
-		0B8714FE1DFFAB8A00FA5DE5 /* Registered.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8714FD1DFFAB8A00FA5DE5 /* Registered.m */; };
-		0B87150A1DFFBE3900FA5DE5 /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8715091DFFBE3900FA5DE5 /* LogIn.m */; };
-		0B87150D1DFFCDB000FA5DE5 /* Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87150C1DFFCDB000FA5DE5 /* Comparison.m */; };
+		0B2552431E014867005234CF /* RegisteredUserName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2552421E014867005234CF /* RegisteredUserName.m */; };
+		0B2552461E0148D2005234CF /* RegisteredPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2552451E0148D2005234CF /* RegisteredPassWord.m */; };
+		0B2552491E0148E6005234CF /* LogInUserName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2552481E0148E6005234CF /* LogInUserName.m */; };
+		0B25524C1E0148FA005234CF /* LogInPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B25524B1E0148FA005234CF /* LogInPassWord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,12 +29,14 @@
 /* Begin PBXFileReference section */
 		0B12D3CB1DFF1BE400967386 /* Logxz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Logxz; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B12D3CE1DFF1BE400967386 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0B8714FC1DFFAB8A00FA5DE5 /* Registered.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registered.h; sourceTree = "<group>"; };
-		0B8714FD1DFFAB8A00FA5DE5 /* Registered.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registered.m; sourceTree = "<group>"; };
-		0B8715081DFFBE3900FA5DE5 /* LogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogIn.h; sourceTree = "<group>"; };
-		0B8715091DFFBE3900FA5DE5 /* LogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogIn.m; sourceTree = "<group>"; };
-		0B87150B1DFFCDB000FA5DE5 /* Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comparison.h; sourceTree = "<group>"; };
-		0B87150C1DFFCDB000FA5DE5 /* Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comparison.m; sourceTree = "<group>"; };
+		0B2552411E014867005234CF /* RegisteredUserName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredUserName.h; sourceTree = "<group>"; };
+		0B2552421E014867005234CF /* RegisteredUserName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredUserName.m; sourceTree = "<group>"; };
+		0B2552441E0148D2005234CF /* RegisteredPassWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredPassWord.h; sourceTree = "<group>"; };
+		0B2552451E0148D2005234CF /* RegisteredPassWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredPassWord.m; sourceTree = "<group>"; };
+		0B2552471E0148E6005234CF /* LogInUserName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInUserName.h; sourceTree = "<group>"; };
+		0B2552481E0148E6005234CF /* LogInUserName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInUserName.m; sourceTree = "<group>"; };
+		0B25524A1E0148FA005234CF /* LogInPassWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInPassWord.h; sourceTree = "<group>"; };
+		0B25524B1E0148FA005234CF /* LogInPassWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInPassWord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				0B12D3CE1DFF1BE400967386 /* main.m */,
-				0B8714FC1DFFAB8A00FA5DE5 /* Registered.h */,
-				0B8714FD1DFFAB8A00FA5DE5 /* Registered.m */,
-				0B8715081DFFBE3900FA5DE5 /* LogIn.h */,
-				0B8715091DFFBE3900FA5DE5 /* LogIn.m */,
-				0B87150B1DFFCDB000FA5DE5 /* Comparison.h */,
-				0B87150C1DFFCDB000FA5DE5 /* Comparison.m */,
+				0B2552411E014867005234CF /* RegisteredUserName.h */,
+				0B2552421E014867005234CF /* RegisteredUserName.m */,
+				0B2552441E0148D2005234CF /* RegisteredPassWord.h */,
+				0B2552451E0148D2005234CF /* RegisteredPassWord.m */,
+				0B2552471E0148E6005234CF /* LogInUserName.h */,
+				0B2552481E0148E6005234CF /* LogInUserName.m */,
+				0B25524A1E0148FA005234CF /* LogInPassWord.h */,
+				0B25524B1E0148FA005234CF /* LogInPassWord.m */,
 			);
 			path = Logxz;
 			sourceTree = "<group>";
@@ -134,10 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B87150A1DFFBE3900FA5DE5 /* LogIn.m in Sources */,
 				0B12D3CF1DFF1BE400967386 /* main.m in Sources */,
-				0B87150D1DFFCDB000FA5DE5 /* Comparison.m in Sources */,
-				0B8714FE1DFFAB8A00FA5DE5 /* Registered.m in Sources */,
+				0B2552461E0148D2005234CF /* RegisteredPassWord.m in Sources */,
+				0B2552431E014867005234CF /* RegisteredUserName.m in Sources */,
+				0B25524C1E0148FA005234CF /* LogInPassWord.m in Sources */,
+				0B2552491E0148E6005234CF /* LogInUserName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

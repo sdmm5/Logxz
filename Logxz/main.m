@@ -7,181 +7,58 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LogIn.h"
-#import "Registered.h"
-int main (int argc, const char * argv[])
-{
-    Registered *reg = [[Registered alloc] init];
-    [reg print];
+#import "RegisteredPassWord.h"
+#import "RegisteredUserName.h"
+#import "LogInPassWord.h"
+#import "LogInUserName.h"
+int main(int argc, const char * argv[]) {
     
-    LogIn *log = [[LogIn alloc] init];
+        NSLog (@"---------注册---------");
+        RegisteredUserName *rUserName = [[RegisteredUserName alloc] init];
     
+        RegisteredPassWord *rPassWord = [[RegisteredPassWord alloc] init];
+//        NSMutableString *newUserName = [NSMutableString stringWithFormat:@"%@",rUserName];
+//        NSMutableString *newPassWord = [NSMutableString stringWithFormat:@"%@",rPassWord];
+    NSMutableString *str2 =[NSMutableString stringWithCapacity:12];
+    NSMutableString *str3 = [NSMutableString stringWithCapacity:12];
+    [rUserName userName:str2];
+    [rPassWord userName:str3];
     
-    return (0);
+//        NSMutableString *newUserName = [NSMutableString stringWithFormat:@"%@",rUserName];
+//        NSMutableString *newPassWord = [NSMutableString stringWithFormat:@"%@",rPassWord];
+
     
+                //注册
+    NSLog(@"%@",rUserName);
+        
+        //登录
+        NSLog (@"---------登录---------");
+        LogInUserName *iUserName = [[LogInUserName alloc] init];
+        LogInPassWord *iPassWord = [[LogInPassWord alloc] init];
+//        NSMutableString *oldUserName =[NSMutableString stringWithFormat:@"%@",iUserName];
+//        NSMutableString *oldPassWord =[NSMutableString stringWithFormat:@"%@",iPassWord];
+    NSMutableString *str = [NSMutableString stringWithCapacity:12];
+    NSMutableString *str1 = [NSMutableString stringWithCapacity:12];
+        [iUserName userName:str];
+        [iPassWord userName:str1];
+    
+//        NSMutableString *oldUserName =[NSMutableString stringWithFormat:@"%@",iUserName];
+//        NSMutableString *oldPassWord =[NSMutableString stringWithFormat:@"%@",iPassWord];
+    
+        //验证用户名密码是否登录成功
+        if ([[iUserName userName:str] compare: [rUserName userName:str2] options:NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
+        {
+//            if ([[iPassWord userName:str1] compare:[rPassWord userName:str3] options:NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
+//            {
+//                NSLog (@"登录成功！");
+//            }
+            NSLog (@"登录成功！");
+        }else
+        {
+            NSLog (@"该用户不存在");
+        }
+    
+    return 0;
 }
-    
-//    NSMutableString *username = [NSMutableString stringWithCapacity:27];
-//    char buffer[100];
-//    NSLog (@"注册用户名:");
-//    scanf("%s",buffer);
-//    NSMutableString *str = [NSMutableString stringWithUTF8String:buffer];
-//    username = str;
-////    NSLog (@"%@",username);x
-//    
-//    
-//    NSMutableString *pwd = [NSMutableString stringWithCapacity:27];
-//    char buffer1[100];
-//    NSLog (@"密码:");
-//    scanf("%s", buffer1);
-//    NSMutableString *str1 = [NSMutableString stringWithUTF8String:buffer1];
-//    pwd = str1;
-////    NSLog (@"%@", pwd);
-//    
-//    NSLog (@"注册成功!");
-//    
-//    NSLog (@"------------------------------");
-//    NSLog (@"-------------登录--------------");
-//    char buffer2[100];
-//    NSLog (@"用户名:");
-//    scanf ("%s", buffer2);
-//    NSMutableString *str2 = [NSMutableString stringWithUTF8String:buffer2];
-//    
-//    char buffer3[100];
-//    NSLog (@"密码：");
-//    scanf ("%s", buffer3);
-//    NSMutableString *str3 = [NSMutableString stringWithUTF8String:buffer3];
-//    
-//
-//    
-//    
-//   if ([username compare: str2 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//{
-//    if ([pwd compare: str3 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//    {
-//        NSLog (@"登录成功！");
-//        
-//    } else {
-//        NSLog (@"密码错误!");
-//        
-//        char buffer2[100];
-//        NSLog (@"用户名:");
-//        scanf ("%s", buffer2);
-//        NSMutableString *str2 = [NSMutableString stringWithUTF8String:buffer2];
-//        
-//        char buffer3[100];
-//        NSLog (@"密码：");
-//        scanf ("%s", buffer3);
-//        NSMutableString *str3 = [NSMutableString stringWithUTF8String:buffer3];
-//        if ([username compare: str2 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//        {
-//            if ([pwd compare: str3 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//            {
-//                NSLog (@"登录成功！");
-//                
-//            } else {
-//                NSLog (@"密码错误!");
-//                char buffer2[100];
-//                NSLog (@"用户名:");
-//                scanf ("%s", buffer2);
-//                NSMutableString *str2 = [NSMutableString stringWithUTF8String:buffer2];
-//                
-//                char buffer3[100];
-//                NSLog (@"密码：");
-//                scanf ("%s", buffer3);
-//                NSMutableString *str3 = [NSMutableString stringWithUTF8String:buffer3];
-//                if ([username compare: str2 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//                {
-//                    if ([pwd compare: str3 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//                    {
-//                        NSLog (@"登录成功！");
-//                        
-//                    } else {
-//                        NSLog (@"密码错误!");
-//                        
-//                    }
-//                    
-//                } else {
-//                    NSLog(@"该用户不存在!");
-//                }
-//
-//            }
-//            
-//        } else {
-//            NSLog(@"该用户不存在!");
-//        }
-//
-//    }
-//   
-//} else {
-//    NSLog(@"该用户不存在!");
-//    char buffer2[100];
-//    NSLog (@"用户名:");
-//    scanf ("%s", buffer2);
-//    NSMutableString *str2 = [NSMutableString stringWithUTF8String:buffer2];
-//    
-//    char buffer3[100];
-//    NSLog (@"密码：");
-//    scanf ("%s", buffer3);
-//    NSMutableString *str3 = [NSMutableString stringWithUTF8String:buffer3];
-//    
-//    if ([username compare: str2 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//    {
-//        if ([pwd compare: str3 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//        {
-//            NSLog (@"登录成功！");
-//            
-//        } else {
-//            NSLog (@"密码错误!");
-//            
-//        }
-//        
-//    } else {
-//        NSLog(@"该用户不存在!");
-//        char buffer2[100];
-//        NSLog (@"用户名:");
-//        scanf ("%s", buffer2);
-//        NSMutableString *str2 = [NSMutableString stringWithUTF8String:buffer2];
-//        
-//        char buffer3[100];
-//        NSLog (@"密码：");
-//        scanf ("%s", buffer3);
-//        NSMutableString *str3 = [NSMutableString stringWithUTF8String:buffer3];
-//        
-//        if ([username compare: str2 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//        {
-//            if ([pwd compare: str3 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//            {
-//                NSLog (@"登录成功！");
-//                
-//            } else {
-//                NSLog (@"密码错误!");
-//                
-//            }
-//            
-//        }
-//    }
-//
-//
-//}
-//    }
-    
-//if ([username compare: str2 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//{
-//    if ([pwd compare: str3 options: NSLiteralSearch | NSNumericSearch] == NSOrderedSame)
-//    {
-//        NSLog (@"登录成功！");
-//        
-//    } else {
-//        NSLog (@"密码错误!");
-//        
-//    }
-//    
-//} else {
-//    NSLog(@"该用户不存在!");
-//}
-//
-//
-    
-    
+
 
